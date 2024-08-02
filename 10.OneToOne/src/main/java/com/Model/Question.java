@@ -7,14 +7,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 @Entity
 @Table
 public class Question
 {
 	@Id
-    int qid;
+    	int qid;
 	@Column
-    String ques;
+    	String ques;
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "pk_A")
 	Answer ans;
